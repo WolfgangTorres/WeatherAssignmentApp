@@ -31,7 +31,6 @@ class WeatherService {
      */
     private func decodeJSON<T: Decodable>(type: T.Type, from data: Data) throws -> T {
         let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         return try decoder.decode(T.self, from: data)
     }
@@ -82,7 +81,7 @@ class WeatherService {
         components?.queryItems = [
             URLQueryItem(name: "latitude", value: "\(latitude)"),
             URLQueryItem(name: "longitude", value: "\(longitude)"),
-            URLQueryItem(name: "current_weather", value: currentWeather ? "true" : "false")
+            URLQueryItem(name: "current_weather", value: "\(currentWeather)")
         ]
         
         // Construct the full URL
