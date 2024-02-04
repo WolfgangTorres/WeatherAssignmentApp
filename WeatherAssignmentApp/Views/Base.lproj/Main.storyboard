@@ -15,9 +15,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0u-qk-Vxw">
+                                <rect key="frame" x="20" y="47" width="91" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jKX-gR-iM1">
+                                <rect key="frame" x="20" y="104.66666666666669" width="350" height="218"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hID-Ju-ZO9" customClass="WeatherReusableView" customModule="WeatherAssignmentApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="66"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAX-jw-i7t" customClass="WeatherReusableView" customModule="WeatherAssignmentApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75.999999999999986" width="350" height="66.000000000000014"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdA-aY-5XX" customClass="WeatherReusableView" customModule="WeatherAssignmentApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="152" width="350" height="66"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.97254901960784312" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jKX-gR-iM1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6PA-4B-QBG"/>
+                            <constraint firstItem="t0u-qk-Vxw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fsq-ki-uk1"/>
+                            <constraint firstItem="jKX-gR-iM1" firstAttribute="top" secondItem="t0u-qk-Vxw" secondAttribute="bottom" constant="30" id="HvU-P9-qsM"/>
+                            <constraint firstItem="t0u-qk-Vxw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YG2-HS-drQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t0u-qk-Vxw" secondAttribute="trailing" constant="20" id="aCM-lJ-ixb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jKX-gR-iM1" secondAttribute="trailing" constant="20" id="pFA-qi-XH1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lastUpdateView" destination="vdA-aY-5XX" id="Aqi-0n-chu"/>
+                        <outlet property="temperatureView" destination="hID-Ju-ZO9" id="GXn-uu-ids"/>
+                        <outlet property="windView" destination="PAX-jw-i7t" id="FAz-g9-x7m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF7A15052B6F01DF007D6C1A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7A15042B6F01DF007D6C1A /* String+Extension.swift */; };
 		DFEF1A4B2B6EB57D00A5A843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A4A2B6EB57D00A5A843 /* AppDelegate.swift */; };
 		DFEF1A4D2B6EB57D00A5A843 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A4C2B6EB57D00A5A843 /* SceneDelegate.swift */; };
 		DFEF1A4F2B6EB57D00A5A843 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A4E2B6EB57D00A5A843 /* WeatherViewController.swift */; };
@@ -15,9 +16,13 @@
 		DFEF1A572B6EB58000A5A843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFEF1A552B6EB58000A5A843 /* LaunchScreen.storyboard */; };
 		DFEF1A642B6EBB8C00A5A843 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A632B6EBB8C00A5A843 /* WeatherData.swift */; };
 		DFEF1A662B6EBBA600A5A843 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A652B6EBBA600A5A843 /* WeatherService.swift */; };
+		DFEF1A6A2B6ED7F400A5A843 /* WeatherReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFEF1A692B6ED7F400A5A843 /* WeatherReusableView.xib */; };
+		DFEF1A6C2B6ED82200A5A843 /* WeatherReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A6B2B6ED82200A5A843 /* WeatherReusableView.swift */; };
+		DFEF1A6E2B6ED8C200A5A843 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A6D2B6ED8C200A5A843 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF7A15042B6F01DF007D6C1A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DFEF1A472B6EB57D00A5A843 /* WeatherAssignmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAssignmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF1A4A2B6EB57D00A5A843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFEF1A4C2B6EB57D00A5A843 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +33,9 @@
 		DFEF1A582B6EB58000A5A843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFEF1A632B6EBB8C00A5A843 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		DFEF1A652B6EBBA600A5A843 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		DFEF1A692B6ED7F400A5A843 /* WeatherReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherReusableView.xib; sourceTree = "<group>"; };
+		DFEF1A6B2B6ED82200A5A843 /* WeatherReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReusableView.swift; sourceTree = "<group>"; };
+		DFEF1A6D2B6ED8C200A5A843 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +68,13 @@
 		DFEF1A492B6EB57D00A5A843 /* WeatherAssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF1A582B6EB58000A5A843 /* Info.plist */,
+				DFEF1A532B6EB58000A5A843 /* Assets.xcassets */,
 				DFEF1A5E2B6EBA9E00A5A843 /* Models */,
 				DFEF1A5F2B6EBAA700A5A843 /* Views */,
 				DFEF1A602B6EBAB100A5A843 /* Controllers */,
+				DFEF1A672B6ED7A700A5A843 /* Extensions */,
 				DFEF1A612B6EBACA00A5A843 /* App Lifecycle */,
-				DFEF1A622B6EBADB00A5A843 /* Resources */,
 			);
 			path = WeatherAssignmentApp;
 			sourceTree = "<group>";
@@ -81,6 +91,7 @@
 		DFEF1A5F2B6EBAA700A5A843 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DFEF1A682B6ED7D100A5A843 /* WeatherReusableView */,
 				DFEF1A502B6EB57D00A5A843 /* Main.storyboard */,
 				DFEF1A552B6EB58000A5A843 /* LaunchScreen.storyboard */,
 			);
@@ -104,13 +115,22 @@
 			path = "App Lifecycle";
 			sourceTree = "<group>";
 		};
-		DFEF1A622B6EBADB00A5A843 /* Resources */ = {
+		DFEF1A672B6ED7A700A5A843 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DFEF1A532B6EB58000A5A843 /* Assets.xcassets */,
-				DFEF1A582B6EB58000A5A843 /* Info.plist */,
+				DFEF1A6D2B6ED8C200A5A843 /* UIView+Extension.swift */,
+				DF7A15042B6F01DF007D6C1A /* String+Extension.swift */,
 			);
-			path = Resources;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DFEF1A682B6ED7D100A5A843 /* WeatherReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				DFEF1A692B6ED7F400A5A843 /* WeatherReusableView.xib */,
+				DFEF1A6B2B6ED82200A5A843 /* WeatherReusableView.swift */,
+			);
+			path = WeatherReusableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +193,7 @@
 			files = (
 				DFEF1A572B6EB58000A5A843 /* LaunchScreen.storyboard in Resources */,
 				DFEF1A542B6EB58000A5A843 /* Assets.xcassets in Resources */,
+				DFEF1A6A2B6ED7F400A5A843 /* WeatherReusableView.xib in Resources */,
 				DFEF1A522B6EB57D00A5A843 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7A15052B6F01DF007D6C1A /* String+Extension.swift in Sources */,
+				DFEF1A6C2B6ED82200A5A843 /* WeatherReusableView.swift in Sources */,
+				DFEF1A6E2B6ED8C200A5A843 /* UIView+Extension.swift in Sources */,
 				DFEF1A662B6EBBA600A5A843 /* WeatherService.swift in Sources */,
 				DFEF1A4F2B6EB57D00A5A843 /* WeatherViewController.swift in Sources */,
 				DFEF1A4B2B6EB57D00A5A843 /* AppDelegate.swift in Sources */,
