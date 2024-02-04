@@ -9,6 +9,8 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
+    @IBOutlet weak var stackContainer: UIStackView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lastUpdateView: WeatherReusableView!
     @IBOutlet weak var windView: WeatherReusableView!
     @IBOutlet weak var temperatureView: WeatherReusableView!
@@ -22,6 +24,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.stackContainer.isHidden = true
         self.fetchWeatherData()
     }
     
@@ -54,6 +57,9 @@ class WeatherViewController: UIViewController {
                 to: "hh:mm a, MMMM dd, yyyy"
             )
         )
+        
+        self.activityIndicator.stopAnimating()
+        self.stackContainer.isHidden = false
     }
 
 

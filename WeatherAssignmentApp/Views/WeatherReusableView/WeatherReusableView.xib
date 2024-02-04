@@ -31,16 +31,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="upl-Vf-MrM">
-                    <rect key="frame" x="16" y="23" width="333" height="20"/>
+                    <rect key="frame" x="16" y="24" width="333" height="18"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74x-zj-zMR">
-                            <rect key="frame" x="0.0" y="0.0" width="31" height="20"/>
+                            <rect key="frame" x="0.0" y="0.0" width="31" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                             <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjU-v2-FKD">
-                            <rect key="frame" x="41" y="0.0" width="292" height="20"/>
+                            <rect key="frame" x="41" y="0.0" width="292" height="18"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -51,10 +51,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="upl-Vf-MrM" secondAttribute="trailing" constant="16" id="1vI-4p-kRm"/>
-                <constraint firstItem="upl-Vf-MrM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="23" id="3qd-vQ-Dj3"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="upl-Vf-MrM" secondAttribute="bottom" constant="23" id="8V0-c2-7Hc"/>
-                <constraint firstItem="upl-Vf-MrM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qGq-eb-ufp"/>
+                <constraint firstItem="upl-Vf-MrM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="WKl-eP-S9E"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="upl-Vf-MrM" secondAttribute="trailing" constant="16" id="gnQ-m3-9R9"/>
+                <constraint firstItem="upl-Vf-MrM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kAp-in-yad"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="101.53846153846153" y="-166.35071090047393"/>
