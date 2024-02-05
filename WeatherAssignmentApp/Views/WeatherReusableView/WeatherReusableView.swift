@@ -52,7 +52,17 @@ final class WeatherReusableView: UIView {
         self.addSubview(view)
     }
     
+    private func configureDynamicType() {
+        self.titleLabel.adjustsFontForContentSizeCategory = true
+        self.titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        
+        self.valueLabel.adjustsFontForContentSizeCategory = true
+        self.valueLabel.font = UIFont.preferredFont(forTextStyle: .body)
+    }
+    
     func configure(title: String, value: String) {
+        self.configureDynamicType()
+        
         self.titleLabel.text = title
         self.valueLabel.text = value
     }
