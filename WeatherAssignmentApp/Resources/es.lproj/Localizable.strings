@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WeatherAssignmentApp
+
+  Created by Andres Torres on 05/02/24.
+  
+*/
+
+"temperature" = "Temperatura";
+"wind" = "Viento";
+"lastUpdated" = "Ultima Actualización";

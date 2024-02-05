@@ -24,4 +24,13 @@ extension String {
         
         return dateFormatter.string(from: date)
     }
+    
+    func localized() -> String {
+        return NSLocalizedString(
+            self,
+            tableName: "Localizable",
+            bundle: .main,
+            value: self,
+            comment: self)
+    }
 }

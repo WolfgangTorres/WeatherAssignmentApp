@@ -44,15 +44,15 @@ class WeatherViewController: UIViewController {
         guard let weather = self.weatherInfo else { return }
         
         self.temperatureView.configure(
-            title: "Temperature",
+            title: "temperature".localized(),
             value: "\(weather.currentWeather.temperature)\(weather.currentWeatherUnits.temperature)")
         
         self.windView.configure(
-            title: "Wind",
+            title: "wind".localized(),
             value: "\(weather.currentWeather.windspeed) \(weather.currentWeatherUnits.windspeed)")
         
         self.lastUpdateView.configure(
-            title: "Last Updated",
+            title: "lastUpdated".localized(),
             value: weather.currentWeather.time.convertDateFormat(
                 to: "hh:mm a, MMMM dd, yyyy"
             )

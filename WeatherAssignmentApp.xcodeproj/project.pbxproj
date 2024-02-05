@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF75A56C2B71593D00A139A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF75A56E2B71593D00A139A0 /* Localizable.strings */; };
 		DF7A15052B6F01DF007D6C1A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7A15042B6F01DF007D6C1A /* String+Extension.swift */; };
 		DFEF1A4B2B6EB57D00A5A843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A4A2B6EB57D00A5A843 /* AppDelegate.swift */; };
 		DFEF1A4D2B6EB57D00A5A843 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEF1A4C2B6EB57D00A5A843 /* SceneDelegate.swift */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF75A5692B71590700A139A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		DF75A56D2B71593D00A139A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DF75A56F2B71594300A139A0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF7A15042B6F01DF007D6C1A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DFEF1A472B6EB57D00A5A843 /* WeatherAssignmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAssignmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEF1A4A2B6EB57D00A5A843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF75A5702B715ABA00A139A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF75A56E2B71593D00A139A0 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DFEF1A3E2B6EB57D00A5A843 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +87,7 @@
 				DFEF1A602B6EBAB100A5A843 /* Controllers */,
 				DFEF1A672B6ED7A700A5A843 /* Extensions */,
 				DFEF1A612B6EBACA00A5A843 /* App Lifecycle */,
+				DF75A5702B715ABA00A139A0 /* Resources */,
 			);
 			path = WeatherAssignmentApp;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = DFEF1A3E2B6EB57D00A5A843;
 			productRefGroup = DFEF1A482B6EB57D00A5A843 /* Products */;
@@ -191,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF75A56C2B71593D00A139A0 /* Localizable.strings in Resources */,
 				DFEF1A572B6EB58000A5A843 /* LaunchScreen.storyboard in Resources */,
 				DFEF1A542B6EB58000A5A843 /* Assets.xcassets in Resources */,
 				DFEF1A6A2B6ED7F400A5A843 /* WeatherReusableView.xib in Resources */,
@@ -219,10 +234,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DF75A56E2B71593D00A139A0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF75A56D2B71593D00A139A0 /* en */,
+				DF75A56F2B71594300A139A0 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DFEF1A502B6EB57D00A5A843 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DFEF1A512B6EB57D00A5A843 /* Base */,
+				DF75A5692B71590700A139A0 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -242,6 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -302,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
